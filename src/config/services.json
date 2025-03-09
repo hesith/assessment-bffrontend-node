@@ -1,0 +1,14 @@
+{
+    "services":{
+        "auth":{
+            "basePath": "/auth",
+            "routes": [
+                {
+                    "path":"/login",
+                    "method": "POST",
+                    "handler": "login"
+                }
+            ]
+        }
+    }
+}
