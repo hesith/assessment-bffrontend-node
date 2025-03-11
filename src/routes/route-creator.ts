@@ -12,9 +12,16 @@ const createRouter = (serviceName: string, routes: IRoute[]) => {
 
     routes.forEach((route)=>{
         const handler = controller[serviceName+"Controller"][route.handler];
-        const httpMethod : HttpMethod = route.method as HttpMethod; 
+        const httpMethod : HttpMethod = route.method as HttpMethod;  
 
         switch (httpMethod){
+            case HttpMethod.GET:
+                router.get(
+                    route.path,
+                    authMiddleware,
+                    (req: Request, res: Response, next: NextFunction) => handler(req,res).catch(next)
+                )
+                break;
             case HttpMethod.POST:
                 router.post(
                     route.path,

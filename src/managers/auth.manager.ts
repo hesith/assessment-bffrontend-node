@@ -39,6 +39,10 @@ class AuthManager{
         }
     }
 
+    public validateJwt = (token: string) => {
+        return (jwt.verify(token, process.env.JWT_SECRET ?? '') == jwt.decode(token));
+    }
+
     private generateToken = async(email: string) =>{
         const token = jwt.sign(email, process.env.JWT_SECRET ?? "");
         return token;

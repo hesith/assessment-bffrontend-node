@@ -9,6 +9,16 @@
                     "handler": "login"
                 }
             ]
+        },
+        "dataTable":{
+            "basePath": "/data-table",
+            "routes": [
+                {
+                    "path":"",
+                    "method": "POST",
+                    "handler": "getTableData"
+                }
+            ]
         }
     }
 }
