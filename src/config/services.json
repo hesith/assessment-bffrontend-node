@@ -19,6 +19,16 @@
                     "handler": "getTableData"
                 }
             ]
+        },
+        "dashboard":{
+            "basePath": "/dashboard",
+            "routes": [
+                {
+                    "path":"/data",
+                    "method": "GET",
+                    "handler": "getDashboardData"
+                }
+            ]
         }
     }
 }

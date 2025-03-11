@@ -1,6 +1,5 @@
-export const books = [
+export const books = [ 
     { id: 1, bookName: "1984", author: "George Orwell", country: "UK", yearOfPublish: 1949 },
-  { id: 2, bookName: "Harry Potter and the Sorcerer’s Stone", author: "J.K. Rowling", country: "UK", yearOfPublish: 1997 },
   { id: 3, bookName: "The Adventures of Tom Sawyer", author: "Mark Twain", country: "USA", yearOfPublish: 1876 },
   { id: 4, bookName: "War and Peace", author: "Leo Tolstoy", country: "Russia", yearOfPublish: 1869 },
   { id: 5, bookName: "Pride and Prejudice", author: "Jane Austen", country: "UK", yearOfPublish: 1813 },
@@ -27,7 +26,6 @@ export const books = [
   { id: 26, bookName: "Les Misérables", author: "Victor Hugo", country: "France", yearOfPublish: 1862 },
   { id: 27, bookName: "The Brothers Karamazov", author: "Fyodor Dostoevsky", country: "Russia", yearOfPublish: 1880 },
   { id: 28, bookName: "Anna Karenina", author: "Leo Tolstoy", country: "Russia", yearOfPublish: 1878 },
-  { id: 29, bookName: "One Hundred Years of Solitude", author: "Gabriel García Márquez", country: "Colombia", yearOfPublish: 1967 },
   { id: 30, bookName: "The Metamorphosis", author: "Franz Kafka", country: "Austria", yearOfPublish: 1915 },
   { id: 31, bookName: "The Old Man and the Sea", author: "Ernest Hemingway", country: "USA", yearOfPublish: 1952 },
   { id: 32, bookName: "Madame Bovary", author: "Gustave Flaubert", country: "France", yearOfPublish: 1856 },

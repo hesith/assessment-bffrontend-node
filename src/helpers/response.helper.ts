@@ -6,5 +6,6 @@ export const handleSuccess = (res: Response, data: ApiResponse<any>) => {
 }
 
 export const handleError = (res: Response, code: number) => {
-    res.status(code);
+    const data:ApiResponse<any> = {success: false, msg: code.toString(), data: null}; 
+    res.status(code).json(data);
 }

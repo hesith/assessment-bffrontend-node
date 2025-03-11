@@ -1,5 +1,6 @@
 import { NextFunction, Request, Response } from "express";
 import { authManager } from "../managers/auth.manager";
+import { handleError } from "../helpers/response.helper";
 
 const authMiddleware = (req: Request, res: Response, next: NextFunction) => {
     if(req.originalUrl.endsWith("/login")){
@@ -14,8 +15,10 @@ const authMiddleware = (req: Request, res: Response, next: NextFunction) => {
             const valid = authManager.validateJwt(token ?? '') 
             if(valid==true){
                 return next(); 
-            }  
+            }
         } 
+
+        handleError(res, 401);
     }
     catch(e)
     {
