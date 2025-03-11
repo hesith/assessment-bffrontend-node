@@ -18,11 +18,11 @@ const authMiddleware = (req: Request, res: Response, next: NextFunction) => {
             }
         } 
 
-        handleError(res, 401);
+        throw new Error();
     }
     catch(e)
     {
-
+        next(e)
     }
     
 }
